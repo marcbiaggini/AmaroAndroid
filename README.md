@@ -23,4 +23,4 @@ Read the docs! Follow coding style and, if you have any suggestion, consider dis
 0. [Git Branching Model and Pull Requests](/git-branching-model-and-pull-requests.md)
 0. [Drawable naming](/drawable.md)
 0. [Layout naming](/layout.md)
-0. [Tests](docs/Tests/tests.md)
+0. [Tests](docs/Tests/getting-started.md)
