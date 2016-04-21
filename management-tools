@@ -6,7 +6,7 @@ We use Bitbucket for all projects repository.
 
 There is a special one, rockspoon-docs, where the API documentation is being maintained. You can find [all API docs here](https://bitbucket.org/rockspoon/rockspoon-docs/src/c4abb6defe7f/Books/Backend/api/?at=master).
 
-## JIRA
+## ASANA
 
 We use [ASANA](https://app.asana.com/) to manage tasks. Detailed information about task management can be found on [Project Management with Scrum](project-management-with-scrum.md) document.
 
