@@ -17,7 +17,7 @@ Read the docs! Follow coding style and, if you have any suggestion, consider dis
 > **Important:** This documentation is always getting more details. For each increment, a Pull Request will be open and every developer must read and discuss/approve it so it can be merged.
 
 ## Documents
-
+ 
 0. [Management tools](management-tools.md)
 0. [Project Management with Scrum](docs/project-management-with-scrum.md)
 0. [Git Branching Model and Pull Requests](docs/git-branching-model-and-pull-requests.md)
