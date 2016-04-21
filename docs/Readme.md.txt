@@ -22,6 +22,6 @@ Read the docs! Follow coding style and, if you have any suggestion, consider dis
 0. [Project Management with Scrum](docs/project-management-with-scrum.md)
 0. [Git Branching Model and Pull Requests](docs/git-branching-model-and-pull-requests.md)
 0. [Java Coding Style](docs/swift-coding-style.md)
-0. [Drawable naming](res/drawable/...)(docs/drawable.md)
+0. [Drawable naming](docs/drawable.md)
 0. [Layout naming](docs/layout.md)
 0. [Tests (draft)](docs/tests.md)
