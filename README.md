@@ -8,7 +8,7 @@ Clone this repository and open on Android Studio. That should be all.
 
 ## Dependency management
 
-This project uses Gradle(currently used version `2.0.0*` ).
+This project uses Gradle(currently used version `2.0.0` ).
 
 ## Before you start coding
 
