@@ -28,4 +28,4 @@ The image below shows all the diferents sets inside of Espresso suite.
 
 Now that all the differents sets of componets has been introduced, is time to develop the first Test. In this Repository there is a project called **AutomationTest**, Please fork it in order to understand better this Tutorial.
 
-[Next >](/My_First_Test.md)
+[Next >](/docs/Tests/My_First_Test.md)
