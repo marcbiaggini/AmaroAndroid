@@ -18,7 +18,7 @@ Read the docs! Follow coding style and, if you have any suggestion, consider dis
 
 ## Documents
  
-0. [Management tools](management-tools.md)
+0. [Management tools](Inicial Setup Documentation/management-tools.md)
 0. [Project Management with Scrum](docs/project-management-with-scrum.md)
 0. [Git Branching Model and Pull Requests](docs/git-branching-model-and-pull-requests.md)
 0. [Java Coding Style](docs/swift-coding-style.md)
