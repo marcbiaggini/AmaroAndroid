@@ -1,6 +1,6 @@
 # Drawable naming
 
-When adding images to xcassets, use these patterns for names.
+When adding images to drawable folder, use these patterns for names.
 
 - icons: `ic_<context>_<description>`
 - backgrounds: `bg_<context>_<description>`
