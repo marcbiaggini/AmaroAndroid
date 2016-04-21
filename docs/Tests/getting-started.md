@@ -63,4 +63,4 @@ First of all On your device, under Settings->Developer options disable the follo
 
 
 
-[Next >](docs/Tests/Understanding_Espresso_Suite.md)
+[Next >](/Understanding_Espresso_Suite.md)
