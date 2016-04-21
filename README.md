@@ -19,9 +19,8 @@ Read the docs! Follow coding style and, if you have any suggestion, consider dis
 ## Documents
   
 0. [Management tools](/management-tools.md)
-0. [Project Management with Scrum](docs/project-management-with-scrum.md)
-0. [Git Branching Model and Pull Requests](docs/git-branching-model-and-pull-requests.md)
-0. [Java Coding Style](docs/swift-coding-style.md)
-0. [Drawable naming](docs/drawable.md)
-0. [Layout naming](docs/layout.md)
-0. [Tests (draft)](docs/tests.md)
+0. [Project Management with Scrum](/project-management-with-scrum.md)
+0. [Git Branching Model and Pull Requests](/git-branching-model-and-pull-requests.md)
+0. [Drawable naming](/drawable.md)
+0. [Layout naming](/layout.md)
+0. [Tests](docs/tests.md)
