@@ -2,6 +2,9 @@
 
 Here you'll find useful documents to start developlment.
 
+## Project Description
+This project is an E-commerce mobile application developed for Amaro Fashion, this application is under development and it will used as sales channel for Android Segment.
+
 ## Starting up
 
 Clone this repository and open on Android Studio. That should be all.
