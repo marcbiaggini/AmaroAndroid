@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="amaro.amaroandroid.Areas.Account.AccountActivity"
+    tools:showIn="@layout/activity_account">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btnCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            fancy:fb_borderColor="@android:color/transparent"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@android:color/transparent"
+            fancy:fb_focusColor="@color/colorLightDarkFocus"
+            fancy:fb_text="MEU CADASTRO"
+            fancy:fb_textColor="@color/colorLightDark"
+            fancy:fb_textSize="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/divider_color"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btnPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            fancy:fb_borderColor="@android:color/transparent"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@android:color/transparent"
+            fancy:fb_focusColor="@color/colorLightDarkFocus"
+            fancy:fb_text="MEUS PEDIDOS"
+            fancy:fb_textColor="@color/colorLightDark"
+            fancy:fb_textSize="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/divider_color"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btnCreditos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            fancy:fb_borderColor="@android:color/transparent"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@android:color/transparent"
+            fancy:fb_focusColor="@color/colorLightDarkFocus"
+            fancy:fb_text="MEUS CRÉDITOS"
+            fancy:fb_textColor="@color/colorLightDark"
+            fancy:fb_textSize="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/divider_color"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btnSair"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            fancy:fb_borderColor="@android:color/transparent"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@android:color/transparent"
+            fancy:fb_focusColor="@color/colorLightDarkFocus"
+            fancy:fb_text="SAIR"
+            fancy:fb_textColor="@color/colorLightDark"
+            fancy:fb_textSize="20dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

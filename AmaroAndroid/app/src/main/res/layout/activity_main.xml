@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="amaro.amaroandroid.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/barlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.PopupOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                android:theme="@style/ToolbarTheme"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.DrawerLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/drawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/barlayout">
+
+            <!-- The main content view -->
+            <RelativeLayout
+                android:id="@+id/mainContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <!-- The navigation drawer -->
+            <RelativeLayout
+                android:id="@+id/drawerPane"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start">
+
+                <!-- Profile Box -->
+
+                <RelativeLayout
+                    android:id="@+id/profileBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/custom_border_layout_menu"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="15dp"
+                        android:src="@mipmap/ic_launcher_amaro"
+                        android:visibility="invisible"/>
+
+                    <LinearLayout
+                        android:id="@+id/welcomeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ola, Bem-vinda!"
+                            android:textColor="@color/colorLightDark"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="4dp"
+                            android:text="Não esqueça de fazer o Login"
+                            android:textColor="@color/colorLightDark"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- List of Actions (pages) -->
+                <ListView
+                    android:id="@+id/navList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileBox"
+                    android:layout_marginRight="50dp"
+                    android:background="#ffffffff"
+                    android:choiceMode="singleChoice"
+                    android:divider="#ffffffff"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/navList"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/custom_border_layout_menu_complement">
+
+                    <View
+                        android:id="@+id/viewDivider"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/colorLightDark"/>
+
+                    <TextView
+                        android:id="@+id/txtAjudaMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/viewDivider"
+                        android:layout_below="@+id/viewDivider"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="AJUDA"
+                        android:textColor="@color/colorLightDark"
+                        android:textSize="14sp"
+                        android:textStyle="normal"/>
+
+                    <TextView
+                        android:id="@+id/txtFaleMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/viewDivider"
+                        android:layout_below="@+id/txtAjudaMenu"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="FALE CONOSCO"
+                        android:textColor="@color/colorLightDark"
+                        android:textSize="14sp"
+                        android:textStyle="normal"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.DrawerLayout>
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/barlayout"
+            app:pstsDividerColor="#00000000"
+            app:pstsIndicatorHeight="4dp"
+            app:pstsShouldExpand="true"/>
+
+        <amaro.amaroandroid.Utils.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tabs"
+            tools:context=".MainActivity"/>
+    </RelativeLayout>
+
+    <include layout="@layout/content_main"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="24dp"
+        app:backgroundTint="@android:color/black"
+        app:elevation="6dp"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="#ffffff"/>
+
+</android.support.design.widget.CoordinatorLayout>

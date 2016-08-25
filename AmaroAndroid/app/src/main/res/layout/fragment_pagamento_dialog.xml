@@ -1,0 +1,228 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    tools:context=".Fragments.Message.LoadingFragment">
+
+    <LinearLayout
+        android:id="@+id/cupomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtCupom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:hint="Insira o Cupom"
+                android:inputType="number"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Numero do Cartão"/>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnAplicar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                fancy:fb_borderColor="@color/colorLightDark"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/colorTransparentWhite"
+                fancy:fb_focusColor="@color/colorLightDarkFocus"
+                fancy:fb_text="APLICAR"
+                fancy:fb_textColor="@color/colorLightDark"
+                fancy:fb_textSize="12dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnCredito"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                fancy:fb_borderColor="@android:color/transparent"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/colorLightDark"
+                fancy:fb_focusColor="@color/colorLightDarkFocus"
+                fancy:fb_text="CREDITO"
+                fancy:fb_textColor="@color/colorTransparentWhite"/>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnBoleto"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                fancy:fb_borderColor="@color/colorLightDark"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/colorTransparentWhite"
+                fancy:fb_focusColor="@color/colorLightDarkFocus"
+                fancy:fb_text="BOLETO"
+                fancy:fb_textColor="@color/colorLightDark"
+                fancy:fb_textSize="12dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtBoleto"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnContinuar"
+        android:layout_below="@+id/cupomLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="@string/boleto_msg"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/paymentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnContinuar"
+        android:layout_below="@+id/cupomLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtCartao"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.7"
+                android:hint="Numero do Cartão"
+                android:inputType="number"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Numero do Cartão"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtCvv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:hint="CVV"
+                android:inputType="number"
+                android:maxLength="3"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="CVV"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtMes"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:hint="Mes"
+                android:inputType="number"
+                android:maxLength="2"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Mes"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtAno"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:hint="Ano"
+                android:inputType="number"
+                android:maxLength="4"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Ano"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtNome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Nome do proprietario do cartão"
+                android:inputType="text"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Nome"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spnParcelas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avCupomLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:indicator="BallSpinFadeLoader"
+        app:indicator_color="@color/colorTransparentLightGray"/>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btnContinuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        fancy:fb_borderColor="@android:color/transparent"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="@color/colorLightDark"
+        fancy:fb_focusColor="@color/colorLightDarkFocus"
+        fancy:fb_text="CONTINUAR"
+        fancy:fb_textColor="@color/colorTransparentWhite"/>
+</RelativeLayout>

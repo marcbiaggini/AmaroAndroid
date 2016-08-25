@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="amaro.amaroandroid.Areas.Login.SignInActivity"
+    tools:showIn="@layout/activity_sign_in">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="2dp"
+        card_view:cardBackgroundColor="@color/cardview_light_background"
+        card_view:cardCornerRadius="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <RelativeLayout
+                android:id="@+id/layoutFields"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtxtNameSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="NOME"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelText="Nome"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtxtLastNameSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtxtNameSign"
+                    android:hint="SOBRENOME"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelText="Sobrenome"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtxtEmailSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtxtLastNameSign"
+                    android:hint="E-MAIL"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelText="E-mail"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtxtCpfSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtxtEmailSign"
+                    android:hint="CPF"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelText="CPF"/>
+
+                <LinearLayout
+                    android:id="@+id/layoutData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtxtCpfSign"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edtxtDataSign"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:hint="NASCIMENTO"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        app:met_floatingLabel="normal"
+                        app:met_floatingLabelText="Nascimento"/>
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edtxtCelSign"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.55"
+                        android:hint="CELULAR"
+                        android:inputType="phone"
+                        app:met_floatingLabel="normal"
+                        app:met_floatingLabelText="Celular"/>
+                </LinearLayout>
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtxtPasswordSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutData"
+                    android:hint="SENHA"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelText="Senha"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtxtRpasswordSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtxtPasswordSign"
+                    android:hint="REPITA A SENHA"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelText="Repita a Senha"/>
+            </RelativeLayout>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnContinuarSign"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                fancy:fb_borderColor="@color/colorTransparentWhite"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/colorLightDark"
+                fancy:fb_focusColor="@color/colorLightDarkFocus"
+                fancy:fb_text="CONTINUAR"
+                fancy:fb_textColor="@color/colorTransparentWhite"
+                fancy:fb_textSize="14sp"
+                />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+

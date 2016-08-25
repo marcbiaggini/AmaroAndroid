@@ -1,0 +1,101 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    tools:context=".Fragments.RelatedProductsFragment">
+
+    <TextView
+        android:id="@+id/txtRelatedtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="COMPLETE O LOOK"
+        android:textSize="18dp"/>
+
+    <LinearLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtRelatedtitle"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/products_related"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.44"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.46"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtRecomendedtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="VOCÊ TAMBÉM VAI GOSTAR"
+                android:textSize="18dp"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/products_recomended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.08"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnContinuaCompra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_weight="0.5"
+                fancy:fb_borderColor="@color/colorLightDark"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/colorTransparentWhite"
+                fancy:fb_focusColor="@color/colorLightDarkFocus"
+                fancy:fb_text="CONTINUAR COMPRANDO"
+                fancy:fb_textColor="@color/colorLightDark"
+                fancy:fb_textSize="10dp"/>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnIrCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="0.5"
+                fancy:fb_borderColor="@color/colorLightDark"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/colorLightDark"
+                fancy:fb_focusColor="@color/colorLightDarkFocus"
+                fancy:fb_text="IR PARA CARINHO"
+                fancy:fb_textColor="@color/colorTransparentWhite"
+                fancy:fb_textSize="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

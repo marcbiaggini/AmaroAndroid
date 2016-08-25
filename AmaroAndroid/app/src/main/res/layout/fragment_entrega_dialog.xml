@@ -1,0 +1,208 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    tools:context=".Fragments.Message.LoadingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/tipoEnderecoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="0.08"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RadioButton
+                android:id="@+id/radBtnResidential"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:hint="r"
+                android:text="RESIDENCIAL"
+                android:textSize="12sp"/>
+
+            <RadioButton
+                android:id="@+id/radBtnComercial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:hint="c"
+                android:text="COMERCIAL"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nomeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.18"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtNome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:hint="NOME"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Nome"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtSobrenome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:hint="SOBRENOME"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Sobrenome"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cepLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.18"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtCep"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:hint="CEP"
+                android:inputType="number"
+                android:maxLength="8"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Cep"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtEndereco"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:hint="ENDEREÇO"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Endereco"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/complementoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.18"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtxtNumero"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:hint="NUM"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelText="Numero"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtxtComplemento"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:hint="COMP"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelText="Comp"/>
+            </LinearLayout>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtBairro"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:hint="BAIRRO"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Bairro"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cidadeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtxtCidade"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.6"
+                android:hint="CIDADE"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="cidade"/>
+
+            <Spinner
+                android:id="@+id/spnEstado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/envioLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.18"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spnEnvio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btnContinuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        fancy:fb_borderColor="@android:color/transparent"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="@color/colorLightDark"
+        fancy:fb_focusColor="@color/colorLightDarkFocus"
+        fancy:fb_text="CONTINUAR"
+        fancy:fb_textColor="@color/colorTransparentWhite"/>
+</RelativeLayout>

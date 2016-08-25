@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "658562481801",
+    "project_id": "amaroandroid-cf175"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658562481801:android:2a1e6e29e7104091",
+        "android_client_info": {
+          "package_name": "amaro.api"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIstuLmaye5xCgcSv0S1WTWjDxCvQ3SRw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

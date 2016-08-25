@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="amaro.amaroandroid">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".AmaroApp_"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_amaro"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <action android:name="android.intent.action.SEARCH"/>
+                <action android:name="com.urbanairship.VIEW_RICH_PUSH_INBOX"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Areas.CheckOut.CartActivity_"
+            android:label="@string/title_activity_cart"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Areas.Login.LoginActivity_"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Areas.Login.SignInActivity_"
+            android:label="@string/title_activity_sign_in"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Areas.Products.ProductDetailsActivity_"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Areas.CheckOut.CheckoutActivity_"
+            android:label="@string/title_activity_checkout"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Areas.Account.AccountActivity_"
+            android:label="@string/title_activity_account"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+
+                <category android:name="amaro.amaroandroid"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="amaro.api.Push.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="amaro.api.Push.RegistrationIntentService"
+            android:exported="false">
+        </service>
+
+        <receiver
+            android:name=".urbanAirship.SampleAirshipReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.urbanairship.push.CHANNEL_UPDATED"/>
+                <action android:name="com.urbanairship.push.OPENED"/>
+                <action android:name="com.urbanairship.push.RECEIVED"/>
+                <action android:name="com.urbanairship.push.DISMISSED"/>
+
+                <category android:name="${applicationId}"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

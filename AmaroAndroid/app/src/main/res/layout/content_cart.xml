@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Areas.CheckOut.CartActivity"
+    tools:showIn="@layout/activity_cart">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.72">
+
+            <TextView
+                android:id="@+id/txtEmptyMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Seu Carrinho Está Vazio :("
+                android:visibility="invisible"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/products_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.28">
+
+            <RelativeLayout
+                android:id="@+id/TotalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_border_layout_box"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    android:id="@+id/txtSubTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="SUBTOTAL:"
+                    android:textSize="12sp"/>
+
+
+                <TextView
+                    android:id="@+id/txtSubTotalValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtSubTotal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="23dp"
+                    android:text="0,00"
+                    android:textColor="@color/colorLightDark"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtSubTotalValor"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="FRETE:"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/txtFreteValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/txtSubTotalValor"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0,00"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtFreteValor"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="DESCONTO:"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/txtPagamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/txtFreteValor"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0,00"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtPagamento"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="TOTAL:"
+                    android:textColor="@color/colorLightDark"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/txtTotalValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/txtPagamento"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0,00"
+                    android:textColor="@color/colorLightDark"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtTotalValor"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <mehdi.sakout.fancybuttons.FancyButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="0.5"
+                        fancy:fb_borderColor="@color/colorLightDark"
+                        fancy:fb_borderWidth="1dp"
+                        fancy:fb_defaultColor="@color/colorTransparentWhite"
+                        fancy:fb_focusColor="@color/colorLightDarkFocus"
+                        fancy:fb_text="APLICAR CUPOM"
+                        fancy:fb_textColor="@color/colorLightDark"
+                        fancy:fb_textSize="12dp"/>
+
+                    <mehdi.sakout.fancybuttons.FancyButton
+                        android:id="@+id/btnFinalizarCompra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="0.5"
+                        fancy:fb_borderColor="@color/colorLightDark"
+                        fancy:fb_borderWidth="1dp"
+                        fancy:fb_defaultColor="@color/colorLightDark"
+                        fancy:fb_focusColor="@color/colorLightDarkFocus"
+                        fancy:fb_text="FINALIZAR COMPRA"
+                        fancy:fb_textColor="@color/colorTransparentWhite"
+                        fancy:fb_textSize="12dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

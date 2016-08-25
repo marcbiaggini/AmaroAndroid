@@ -1,0 +1,50 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    tools:context=".Fragments.Message.LoadingFragment">
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avCupomLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:indicator="BallSpinFadeLoader"
+        app:indicator_color="@color/colorTransparentLightGray"/>
+
+    <LinearLayout
+        android:id="@+id/cupomLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtxtCupom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:hint="Insira o seu Cupom"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="Cupom"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="0.5"
+            fancy:fb_borderColor="@color/colorLightDark"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/colorLightDark"
+            fancy:fb_focusColor="@color/colorLightDarkFocus"
+            fancy:fb_text="APLICAR CUPOM"
+            fancy:fb_textColor="@color/colorTransparentWhite"
+            fancy:fb_textSize="12dp"/>
+    </LinearLayout>
+</RelativeLayout>

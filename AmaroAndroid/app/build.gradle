@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+def AAVersion = '4.0-SNAPSHOT'
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0]?.processResources?.manifestFile
+    }
+}
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "amaro.amaroandroid"
+        minSdkVersion 22
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        //Instrumentation Test Runner
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':api')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+
+    //Iconics https://github.com/mikepenz/Android-Iconics
+    compile "com.mikepenz:iconics-core:2.6.6@aar"
+    compile 'com.mikepenz:google-material-typeface:2.2.0.1.original@aar'
+    compile 'com.mikepenz:material-design-iconic-typeface:2.2.0.1@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.6.0.1@aar'
+    compile 'com.mikepenz:octicons-typeface:3.2.0.1@aar'
+    compile 'com.mikepenz:meteocons-typeface:1.1.0.1@aar'
+    compile 'com.mikepenz:community-material-typeface:1.5.54.1@aar'
+    compile 'com.mikepenz:weather-icons-typeface:2.0.10.1@aar'
+    compile 'com.mikepenz:typeicons-typeface:2.0.7.1@aar'
+    compile 'com.mikepenz:entypo-typeface:1.0.0.1@aar'
+    compile 'com.mikepenz:devicon-typeface:2.0.0.1@aar'
+    compile 'com.mikepenz:foundation-icons-typeface:3.0.0.1@aar'
+    compile 'com.mikepenz:ionicons-typeface:2.0.1.1@aar'
+    //Context Menu https://github.com/Yalantis/Context-Menu.Android
+    compile 'com.github.Yalantis:Context-Menu.Android:v1.0.4'
+    //Pager Sliding https://github.com/astuetz/PagerSlidingTabStrip
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+
+    //Android Espresso https://bitbucket.org/amaroteam/amaroandroidapp/src/9403491c719db84661dc6931c6a0e6b182fa316a/docs/Tests/getting-started.md
+    androidTestCompile 'com.android.support:support-annotations:23.3.0'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    // JUnit4 Rules
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    // IdlingResource is used in the app under test
+    androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
+    // Espresso-contrib for DatePicker, RecyclerView, Drawer actions, Accessibility checks, CountingIdlingResource
+    compile 'com.android.support.test.espresso:espresso-contrib:2.2.2'
+    // Mockito http://mockito.org/
+    testCompile "org.mockito:mockito-core:1.+"
+    // required if you want to use Mockito for Android instrumentation tests
+    androidTestCompile 'org.mockito:mockito-core:1.+'
+    androidTestCompile "com.google.dexmaker:dexmaker:1.2"
+    androidTestCompile "com.google.dexmaker:dexmaker-mockito:1.2"
+    //Material https://github.com/rey5137/material
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    //Fancy Buttons https://github.com/medyo/fancybuttons
+    compile 'com.github.medyo:fancybuttons:1.8.1'
+    //LovelyDialog https://github.com/yarolegovich/LovelyDialog
+    compile 'com.yarolegovich:lovely-dialog:1.0.4'
+    //AVLoadingIndicatorView https://github.com/81813780/AVLoadingIndicatorView
+    compile 'com.wang.avi:library:1.0.5'
+    compile 'com.nineoldandroids:library:2.4.0'
+    //Picasso http://square.github.io/picasso/
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.traex.rippleeffect:library:1.3'
+    compile 'com.balysv:material-ripple:1.0.2'
+    compile 'com.mikepenz:actionitembadge:3.2.5@aar'
+    compile 'com.github.linger1216:labelview:v1.1.1'
+    compile 'com.android.support:multidex:1.0.0'
+}

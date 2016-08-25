@@ -1,0 +1,167 @@
+<resources>
+    <string name="app_name">AMARO</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="password_error_message">As senhas devem ser iguais</string>
+    <string name="form_error_message">Debe preencher todas as informações </string>
+    <string name="cart_empty_message">Seu carrinho esta vazio </string>
+    <plurals name="mc_indicator_text">
+        <item quantity="one">%d unread message</item>
+        <item quantity="other">%d unread messages</item>
+    </plurals>
+    <string name="title_activity_cart">SACOLA</string>
+    <string name="title_activity_checkout">RESUMO</string>
+    <string name="title_activity_login">LOGIN</string>
+    <string name="title_activity_product_details">ProductDetailsActivity</string>
+    <string name="delete_item_message">Deseja eliminhar o item da sua sacola?</string>
+    <string name="delete_item_title">Atenção</string>
+    <string name="dialog_success_title">Contestação de\ncompra recebida</string>
+    <string name="dialog_success_body">Fique de olho no seu email! Nos proximos dias você deverá receber um primeiro retorno sobre sua contestação</string>
+    <string name="boleto_msg">Seu pedido ficará reservado por 1 dias útil enquanto aguardamos a confirmação do pagamento.
+        Você receberá o boleto apenas por e-mail e poderá efetuar o pagamento pela internet ou na agência bancária de sua preferência.
+        O banco demora 1 dia útil para repassar os pagamentos para a AMARO. Assim que o pagamento for identificado, seu pedido será enviado.</string>
+    <string-array name="frete">
+        <item>Selecione uma opção</item>
+        <item>SUPER EXPRESS (GRATIS - receba hoje em até 2h30min)</item>
+        <item>EXPRESS (GRATIS - receba hoje em até 2h30min)</item>
+        <item>Transfolha (R$13,44 - 2 dias úteis)</item>
+    </string-array>
+
+    <string-array name="parcela">
+        <item>Selecione uma opção</item>
+        <item>1x ####</item>
+        <item>2x ####</item>
+        <item>3x ####</item>
+    </string-array>
+
+    <string-array name="ufs">
+        <item>UF</item>
+        <item>AC</item>
+        <item>AL</item>
+        <item>AM</item>
+        <item>AP</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MG</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>PR</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>RS</item>
+        <item>SC</item>
+        <item>SE</item>
+        <item>SP</item>
+        <item>TO</item>
+    </string-array>
+
+    <!-- Sub Categories Array -->
+    <string-array name="roupas">
+        <item>Todas as Roupas</item>
+        <item>Blusas</item>
+        <item>Calças</item>
+        <item>Jeans</item>
+        <item>Suéters &amp; Tricôs</item>
+        <item>Blazers &amp; Jaquetas</item>
+        <item>Coletes &amp; Kimonos</item>
+        <item>Macacão</item>
+        <item>Saias</item>
+        <item>Shorts</item>
+        <item>Fitness</item>
+        <item>Moda Praia</item>
+    </string-array>
+
+    <string-array name="fitness">
+        <item>Todas as peças</item>
+        <item>Tops &amp; Body</item>
+        <item>Regatas &amp; Camisetas</item>
+        <item>Calças &amp; Leggings</item>
+        <item>Shorts &amp; Bermudas</item>
+        <item>Casacos &amp; Jaquetas</item>
+        <item>Corrida</item>
+        <item>Academia</item>
+        <item>Yoga &amp; Pilates</item>
+    </string-array>
+
+
+    <string-array name="active">
+        <item>Todas as peças</item>
+        <item>Tops &amp; Body</item>
+        <item>Regatas &amp; Camisetas</item>
+        <item>Calças &amp; Leggings</item>
+        <item>Shorts &amp; Saias</item>
+        <item>Casacos &amp; Jaquetas</item>
+        <item>Corrida</item>
+        <item>Academia</item>
+        <item>Yoga &amp; Pilates</item>
+    </string-array>
+
+    <string-array name="bijoux">
+        <item>Todas as Bijoux</item>
+        <item>Pulseiras</item>
+        <item>Colares</item>
+        <item>Brincos</item>
+        <item>Anéis</item>
+    </string-array>
+
+    <string-array name="acessorios">
+        <item>Todos os Acessórios</item>
+        <item>Cabelo</item>
+        <item>Chapéus</item>
+        <item>Cintos</item>
+        <item>Lenços</item>
+        <item>Óculos de Sol</item>
+    </string-array>
+
+    <string-array name="tendencias">
+        <item>Geek Chic</item>
+        <item>Casual</item>
+        <item>Suede &amp; Leather</item>
+        <item>Cropped</item>
+        <item>Essentials</item>
+        <item>Inverno</item>
+        <item>Sobreposições</item>
+        <item>Night Out</item>
+        <item>Militar &amp; Utilitário</item>
+        <item>Think Pink</item>
+        <item>Workwear</item>
+        <item>Moda Praia</item>
+    </string-array>
+
+    <string-array name="sale">
+        <item>CATEGORIAS</item>
+        <item>TENDÊNCIAS</item>
+        <item>TAMANHOS</item>
+    </string-array>
+
+
+    <string-array name="color">
+        <item>COLOR</item>
+    </string-array>
+
+    <string-array name="size">
+        <item>SIZE</item>
+        <item>PP</item>
+        <item>P</item>
+        <item>M</item>
+        <item>G</item>
+        <item>GG</item>
+    </string-array>
+
+    <string name="title_activity_sign_in">Sign In</string>
+    <string name="title_activity_account">MINHA CONTA</string>
+</resources>

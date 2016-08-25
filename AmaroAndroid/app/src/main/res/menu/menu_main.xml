@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="amaro.amaroandroid.MainActivity">
+
+    <item
+        android:id="@+id/search"
+        android:orderInCategory="1"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/filter"
+        android:orderInCategory="1"
+        android:title="Filter"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/bag"
+        android:orderInCategory="1"
+        android:title="Bag"
+        app:showAsAction="always"/>
+</menu>
