@@ -24,4 +24,4 @@ Read the docs! Follow coding style and, if you have any suggestion, consider dis
 0. [Drawable naming](/drawable.md)
 0. [Layout naming](/layout.md)
 0. [Tests](docs/Tests/getting-started.md)
-0. [Project]()
+0. [Project](/AmaroAndroid)
